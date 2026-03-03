@@ -90,7 +90,7 @@ for(let i=0; i<100; i++)
 	//bullets[i].img.src="images/mrt.jpg"
 	bullets[i].makeSprite(playerData)
 	bullets[i].y=-10000
-	bullets[i].changeState(`walk`)
+	bullets[i].changeState(`fireball`)
 }
 
 //console.log(bullets)

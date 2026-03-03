@@ -91,14 +91,20 @@ var playerData ={
 			//width:300,
 			frames:
 			[
-				{width:128, height:128, startX:1024, startY:0},
-				{width:128, height:128, startX:1024, startY:0},
-				{width:128, height:128, startX:1024, startY:0},
-				{width:128, height:128, startX:1152, startY:0},
-				{width:128, height:128, startX:1152, startY:0},
-				{width:128, height:128, startX:1152, startY:0},
-				{width:128, height:128, startX:1152, startY:0}
-				
+				{width:128, height:128, startX:384, startY:0},
+				{width:128, height:128, startX:512, startY:0},
+				{width:128, height:128, startX:640, startY:0}
+			]
+		},
+		//The attack animation 
+		fireball:
+		{
+			fps:3,
+			cycle:false,
+			//width:300,
+			frames:
+			[
+				{width:128, height:128, startX:640, startY:128}
 			]
 		}
 	}
