@@ -19,7 +19,7 @@ Properties:
 
 var playerData ={
 	info:{
-		src:`images/snale.png`
+		src:`images/nicodemSpritesheet.png`
 	},
 	states:{
 		//The idle animation 
@@ -30,32 +30,44 @@ var playerData ={
 			frames:
 			[
 				{width:128, height:128, startX:0, startY:0},
-				{width:128, height:128, startX:128, startY:0}
+				{width:128, height:128, startX:128, startY:0},
+				{width:128, height:128, startX:256, startY:0},
+				{width:128, height:128, startX:384, startY:0},
+				{width:128, height:128, startX:512, startY:0},
+				{width:128, height:128, startX:640, startY:0},
+				{width:128, height:128, startX:0, startY:128},
+				{width:128, height:128, startX:128, startY:128},
+				{width:128, height:128, startX:256, startY:128},
+				{width:128, height:128, startX:384, startY:128},
+				{width:128, height:128, startX:512, startY:128}
 				
 			]
 		},
 		//The walwidth:128, height:128,
 		walk:
 		{
-			fps:1,
+			fps:15,
 			cycle:true,
 			frames:
 			[
-				{width:128, height:128, startX:0, startY:0},
-				{width:128, height:128, startX:128, startY:0},
-				{width:128, height:128, startX:256, startY:0},
-				{width:128, height:128, startX:384, startY:0},
-				{width:128, height:128, startX:512, startY:0}
+				{width:128, height:128, startX:0, startY:256},
+				{width:128, height:128, startX:128, startY:256},
+				{width:128, height:128, startX:256, startY:256},
+				{width:128, height:128, startX:384, startY:256},
+				{width:128, height:128, startX:512, startY:256},
+				{width:128, height:128, startX:640, startY:256}
 			]
 		},
 		//The jump animation 
 		jump:
 		{
-			fps:15,
+			fps:12,
 			cycle:false,
 			frames:
 			[
-				{width:128, height:128, startX:640, startY:0}
+				{width:128, height:128, startX:256, startY:512},
+				{width:128, height:128, startX:384, startY:512},
+				{width:128, height:128, startX:512, startY:512}
 			]
 		},
 		//The crouch animation 
@@ -65,11 +77,7 @@ var playerData ={
 			cycle:true,
 			frames:
 			[
-				{width:128, height:128, startX:768, startY:0},
-				{width:128, height:128, startX:768, startY:0},
-				{width:128, height:128, startX:768, startY:0},
-				{width:128, height:128, startX:768, startY:0},
-				{width:128, height:128, startX:896, startY:0}
+				{width:128, height:128, startX:384, startY:384}
 			]
 		},
 		//The attack animation 
