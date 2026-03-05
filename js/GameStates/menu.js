@@ -1,44 +1,77 @@
-/*---------------------------------
-This file contains all of the code for the Main Menu
-----------------------------------*/
-
 var startButton = new GameObject();
-//startButton.img.src="images/mrt.jpg"
-startButton.width=200;
-startButton.hitBoxWidth=800
-console.log(startButton.collisionPoints.right)
+startButton.width = 200;
+startButton.hitBoxWidth = 800;
+
+
+var menu = {
+	info:{
+		src:`images/newMenuScreenSpriteSheet.png`
+	},
+	states:{
+		idle:{
+			fps:15,
+			cycle:true,
+			frames:[
+				{width:1024, height:512, startX:0, startY:0}
+			]
+		},
+		animated:{
+			fps:2,
+			cycle:true,
+			frames:[
+				{width:1024, height:512, startX:0, startY:0},
+				{width:1024, height:512, startX:1024, startY:0},
+				{width:1024, height:512, startX:2048, startY:0},
+				{width:1024, height:512, startX:3072, startY:0},
+				{width:1024, height:512, startX:4096, startY:0},
+				{width:1024, height:512, startX:0, startY:512},
+				{width:1024, height:512, startX:1024, startY:512},
+				{width:1024, height:512, startX:2048, startY:512},
+				{width:1024, height:512, startX:3072, startY:512},
+				{width:1024, height:512, startX:4096, startY:512},
+				{width:1024, height:512, startX:0, startY:1024},
+				{width:1024, height:512, startX:1024, startY:1024},
+				{width:1024, height:512, startX:2048, startY:1024},
+				{width:1024, height:512, startX:3072, startY:1024},
+				{width:1024, height:512, startX:4096, startY:1024},
+				{width:1024, height:512, startX:0, startY:1536},
+				{width:1024, height:512, startX:1024, startY:1536},
+				{width:1024, height:512, startX:2048, startY:1536},
+				{width:1024, height:512, startX:3072, startY:1536},
+				{width:1024, height:512, startX:4096, startY:1536}
+			]
+		}
+	}
+};
 
 
 var menuBackground = new GameObject();
-menuBackground.img.src = "images/newMenuScreen.png"
-menuBackground.width=canvas.width
-menuBackground.height=canvas.height
 
-gameStates[`menu`] =function(){
+menuBackground.makeSprite(menu);
+menuBackground.changeState("animated");
 
-	//Makes the button clickable
+menuBackground.width = 1024;
+menuBackground.height = 512;
+
+gameStates[`menu`] = function(){
+
 	if(startButton.overlap(mouse))
 	{
 		if(mouse.pressed)
 		{
-			//Changes to the game state
 			gameStates.changeState(`level1`)
 		}
 
-		//Hover Effect Graffic
-		//startButton.color = `yellow`
 		startButton.img.src = "images/buttonHover.png"
 	}
 	else
 	{
-		//Default Button Graphic
-		//startButton.color = `red`
 		startButton.img.src = "images/buttonNormal.png"
 	}
-	
-	menuBackground.drawStaticImage();
-	//startButton.render()
+
+	menuBackground.play().drawSprite();
+
 	startButton.drawStaticImage();
 }
-	
-	
+
+console.log(menuBackground.spriteData)
