@@ -61,7 +61,7 @@ var playerData ={
 		//The jump animation 
 		jump:
 		{
-			fps:12,
+			fps:4,
 			cycle:false,
 			frames:
 			[
