@@ -1,6 +1,8 @@
 var startButton = new GameObject();
-startButton.width = 200;
-startButton.hitBoxWidth = 800;
+startButton.height = 100;
+startButton.width = 400;
+startButton.hitBoxWidth = 400;
+startButton.hitBoxHeight = 100
 
 
 var menu = {
