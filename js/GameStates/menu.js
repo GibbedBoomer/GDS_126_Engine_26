@@ -62,6 +62,7 @@ gameStates[`menu`] = function(){
 		if(mouse.pressed)
 		{
 			gameStates.changeState(`level1`)
+			sounds.play(`bgMusic`, 0, 1)
 		}
 
 		startButton.img.src = "images/buttonHover.png"
